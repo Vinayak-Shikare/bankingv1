@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testngsuite">
+  <test name="Test1">
+  <parameter name="browser" value="chrome"></parameter>
+  <classes>
+  <class name ="TestNgTutorials.crossbrowsertesting"></class>
+  </classes>
+  </test> <!-- Test -->
+  
+  <test name="Test2">
+  <parameter name="browser" value="chrome"></parameter>
+  <classes>
+  <class name ="TestNgTutorials.crossbrowsertesting"></class>
+  </classes>
+   </test> <!-- Test -->
+   
+   
+  <test name="Test3">
+  <classes>
+  <class name ="TestNgTutorials.assertionintestng">
+  <methods><exclude name="test2"></exclude></methods>
+  </class>
+  <class name ="TestNgTutorials.softassert"></class>
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,68 @@
+TestNg drives TDD(Test Driven Development)
+TestNg is Java unit framework i.e. J Unit
+we use "groups" keyword to define groups for test cases
+use index.html file for report generation
+Data can be driver from excel file, properties files , xml files
+
+How to exclude a particular test method from test case execution
+Ans:By adding the exclude tag in the testng.xml file
+ 	syntax: 
+ 	<classes>
+ 	<class name = "packagename.classname">
+ 	<methods>
+ 	<exclude name =  "testmethodnametoexclude"/>
+ 	</methods>
+ 	</class>
+ 	</classes>
+ 	
+ 
+ How to exclude a particular test group from a test case case execution?
+ 	Ans: By adding the exclude tag in the testng.xml
+ 	Syntax:
+ 	<groups>
+ 	<run>
+ 	<exclude name = "testgroupnametoexclude"/>
+ 	</run>
+ 	</groups>
+ 	
+ 
+ How to disable/ignore  a test case in testng?
+ Ans: to disable test case we use the parameter enabled = false to the @Test annotation
+ 		Syntax: @Test(enabled = false)
+ 	
+ 	
+ How to skip a @Test method from execution in TestNg?
+ Ans: By using throw new skipException()
+ 		Note: Once skipException() thrown, remaining part of that test method will not be executed and 
+ 		control will goes to next test method execution
+ 		throw new skip exception("skipping- this is not ready for testng");
+ 		i.e. by using "expectedexception" keyword
+ 		
+ 		
+ What are different ways to produce reports in testng suites?
+ Ans:By : Index.html file, emailable file,
+ 
+ 
+ How to write regular expression in testng.xml file to search @Test methods containing
+ " smoke " keyword
+ Ans: Syntax: 
+ 		<methods>
+ 		<include name = ".*smoke.*"/>
+ 		</methods>
+ 		
+ 		
+ How to run testng file using command prompt?
+ Ans: C:test
+ 	  Java and than jarfile
+ 	  
+ 	  
+ What does the timeout mean in TestNg?
+ The maximum number of millieseconds a test case should take
+ 	Syntax: @Test(threadpoolsize = 3, invocationcount = 10, timeout = 1000)
+ 	public void testcase1()
+ 	{
+ 	}
+ 	here testcase1 will invoked 10 times from three different threads and additionly time-out
+ 	of 10 seconds
+ 
+ 
